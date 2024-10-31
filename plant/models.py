@@ -11,4 +11,4 @@ class Plant(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['-last_watered_date']
+        ordering = ["-last_watered_date"]

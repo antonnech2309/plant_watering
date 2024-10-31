@@ -7,21 +7,28 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Plant',
+            name="Plant",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('species', models.CharField(max_length=255)),
-                ('watering_frequency_days', models.IntegerField()),
-                ('last_watered_date', models.DateField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("species", models.CharField(max_length=255)),
+                ("watering_frequency_days", models.IntegerField()),
+                ("last_watered_date", models.DateField()),
             ],
             options={
-                'ordering': ['-last_watered_date'],
+                "ordering": ["-last_watered_date"],
             },
         ),
     ]
